@@ -1,0 +1,27 @@
+.card {
+    color: #181818;
+}
+
+.card .image {
+    height: 100%;
+    width: 100%;
+}
+
+.favorite {
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 10px;
+    border-color: #008acd;
+    border-style: solid;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #008acd;
+    transition: ease .5s;
+}
+
+.favorite:hover {
+    background-color: #008acd;
+    color: #fff;
+    border-color: #fff;
+}

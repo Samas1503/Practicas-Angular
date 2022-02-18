@@ -1,0 +1,24 @@
+.divider {
+    width: 100%;
+}
+
+.favoriteList {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1rem;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+}
+
+.favoriteList li {
+    list-style: none;
+}
+
+.favoriteList li .card {
+    width: 100%;
+}
+
+.favoriteList li .card .mini-image {
+    width: 100%;
+}
