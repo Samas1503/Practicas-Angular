@@ -1,1 +1,45 @@
-<p>post-detail works!</p>
+<div class="body">
+    <app-header></app-header>
+    <div class="seccion">
+        <div class="video">
+            <div class="imagen">
+                <img [src]="respuesta?.img" class="imagen-video">
+            </div>
+            <div class="informacion">
+                <h2>&nbsp; Video #{{respuesta?.id}} {{respuesta?.tittle}}</h2>
+                <h3>&nbsp; {{respuesta?.subtittle}}</h3>
+            </div>
+            <div class="comentarios">
+                <div>Comentarios:
+                    <ul class="lista-comentarios">
+                        <li *ngFor="let detaleComentario of comentarios">
+                            <div class="datos-usuario">
+                                <img [src]="usuario?.foto" alt="" class="foto-perfil">
+                                <div class="comentario">
+                                    <h4 class="usuario">{{usuario?.nombre}}</h4>
+                                    <p class="texto">{{detaleComentario?.text}}</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="crear-comentario">
+                    <form class="comentar" [formGroup]="form" (submit)="enviarData(usuario,respuesta)">
+                        <div class="form-group">
+                            <div for="comentArea" class="tittleComent">Comentar</div>
+                            <div class="bloque">
+                                <img [src]="usuario?.foto" alt="" class="foto-perfil">
+                                <textarea formControlName="textAreaComentario" name="comentArea" id="" rows="auto"></textarea>
+                                <button type="submit">Comentar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="extra ">
+            <h5>Recomendados:</h5>
+            <app-card [dataEntrante]="detalleVideo " *ngFor="let detalleVideo of cards "></app-card>
+        </div>
+    </div>
+</div>

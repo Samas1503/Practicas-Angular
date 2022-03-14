@@ -1,0 +1,117 @@
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.seccion {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1em;
+}
+
+.seccion .video {
+    grid-column: 1/4;
+}
+
+.seccion .extra {
+    grid-column: 4/5;
+}
+
+.seccion .video .imagen,
+.seccion .video .comentarios,
+.seccion .video .informacion {
+    width: 100%;
+}
+
+.seccion .video .imagen img {
+    width: 100%;
+}
+
+.comentarios .crear-comentario {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    align-items: start;
+    margin: auto;
+}
+
+.comentarios .lista-comentarios li {
+    list-style-type: none;
+}
+
+.comentarios .lista-comentarios .datos-usuario {
+    display: flex;
+}
+
+.comentarios .lista-comentarios .datos-usuario .foto-perfil {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+}
+
+.comentarios .lista-comentarios .datos-usuario .comentario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.comentarios .lista-comentarios .datos-usuario .comentario .usuario {
+    margin: 5px 0;
+}
+
+.comentarios .lista-comentarios .datos-usuario .comentario .texto {
+    margin: 5px 0;
+}
+
+.comentarios .crear-comentario .comentar {
+    width: 100%;
+}
+
+.comentar {
+    box-shadow: 5px 10px 20px 5px rgba(0, 0, 0, .9);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.comentar .bloque {
+    display: flex;
+    padding: 10px;
+}
+
+.comentar .bloque .foto-perfil {
+    margin: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.comentar .bloque textarea {
+    width: 100%;
+    border-radius: 10px;
+    margin: 0 10px;
+}
+
+.comentar .bloque button {
+    border-radius: 10px;
+    border: 0;
+    background-color: #58c1e1;
+    width: auto;
+}
+
+@media screen and (max-width:850px) {
+    .seccion .video {
+        grid-column: 1/5;
+    }
+    .seccion .extra {
+        grid-column: 1/5;
+    }
+    .comentarios .crear-comentario {
+        width: 100%;
+    }
+}
