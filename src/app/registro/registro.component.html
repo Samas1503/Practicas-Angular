@@ -1,0 +1,30 @@
+<div class="body">
+    <div class="contenedor">
+        <form [formGroup]="formReg" (submit)="send()">
+            <div class="casilla">
+                <label for="nombre">Nombre</label>
+                <input id="nombre" type="text" formControlName="nombre">
+            </div>
+            <div class="casilla">
+                <label for="fotoUsuario">Foto de Usuario</label>
+                <input id="fotoUsuario" type="file" formControlName="foto">
+            </div>
+            <div class="casilla">
+                <label for="correo">Correo Electronico</label>
+                <input id="correo" type="email" formControlName="email">
+            </div>
+            <div class="casilla">
+                <label for="contraseña">Contraseña</label>
+                <input id="contraseña" type="password" formControlName="password">
+            </div>
+            <div class="casilla">
+                <label for="confirmarContraseña">Confirmar Contraseña</label>
+                <input id="confirmarContraseña" type="password">
+            </div>
+            <div class="casilla">
+                <input id="terminosCondiciones" type="checkbox" formControlName="terms"><label for="terminosCondiciones">Acepto los terminos y condiciones</label>
+            </div>
+            <div class="button"><button type="submit" [disabled]="formReg?.invalid">Registrarse!</button></div>
+        </form>
+    </div>
+</div>

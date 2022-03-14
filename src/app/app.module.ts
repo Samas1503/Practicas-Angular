@@ -9,6 +9,9 @@ import { HeaderComponent } from './header/header.component';
 import { PostDetailComponent } from './post-detail/post-detail.component';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RegistroComponent } from './registro/registro.component';
+import { LogInComponent } from './log-in/log-in.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +20,16 @@ import { HttpClientModule } from '@angular/common/http';
     CardComponent,
     HeaderComponent,
     PostDetailComponent,
-    HomeComponent
+    HomeComponent,
+    RegistroComponent,
+    LogInComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
